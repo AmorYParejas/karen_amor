@@ -111,6 +111,9 @@ z-index:2;
 .love-letter{
 
 display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
 padding:30px 20px;
 
@@ -123,7 +126,7 @@ font-size:3rem;
 }
 
 .flower img{
-    width: 100px;
+    width: 150px;
 }
 
 
