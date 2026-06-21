@@ -265,7 +265,24 @@ object-fit:cover;
 .p12{transform:rotate(7deg);}
 .p14{transform:rotate(6deg);}
 
+.p23{
+    width: 320px;
+    margin: 0 auto;
+    background:white;
 
+padding:10px 10px 30px;
+
+position:relative;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.15);
+
+transition:.4s;
+}
+
+.p23 img{
+    width: 300px;
+}
 
 /* FINAL */
 
