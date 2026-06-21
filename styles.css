@@ -1,0 +1,336 @@
+:root{
+
+--paper:#E8D8C0;
+--paper-dark:#D9C3A3;
+
+--brown:#6F5138;
+--brown-light:#A57A4D;
+
+--text:#3A2D23;
+
+--white:#fff;
+--tape:#E7D6A6;
+}
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:
+linear-gradient(
+rgba(255,255,255,.6),
+rgba(255,255,255,.6)
+),
+url("https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200");
+
+background-size:cover;
+background-position:center;
+
+font-family:'Cormorant Garamond', serif;
+
+display:flex;
+justify-content:center;
+
+padding:20px;
+}
+
+.letter{
+
+width:100%;
+max-width:430px;
+
+background:var(--paper);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.18);
+
+overflow:hidden;
+}
+
+/* SOBRE */
+
+.envelope{
+
+height:220px;
+
+background:var(--paper-dark);
+
+position:relative;
+
+clip-path:
+polygon(
+50% 0%,
+100% 30%,
+100% 100%,
+0% 100%,
+0% 30%
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+animation:fadeDown 1s ease;
+}
+
+.coffee-stain{
+
+position:absolute;
+
+width:200px;
+height:70px;
+
+background:#9a6b40;
+
+opacity:.25;
+
+border-radius:50%;
+
+filter:blur(8px);
+}
+
+.envelope h1{
+
+font-family:'Parisienne', cursive;
+
+font-size:3.2rem;
+
+color:var(--text);
+
+z-index:2;
+}
+
+/* CARTA */
+
+.love-letter{
+
+display:flex;
+
+padding:30px 20px;
+
+gap:15px;
+}
+
+.flower{
+
+font-size:3rem;
+}
+
+.flower img{
+    width: 100px;
+}
+
+
+.note{
+
+background:#F5ECE0;
+
+padding:20px;
+
+flex:1;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.08);
+}
+
+.note h2{
+
+font-family:'Parisienne';
+
+font-size:2rem;
+
+margin-bottom:15px;
+
+color:var(--text);
+}
+
+.note p{
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+margin-bottom:15px;
+
+color:var(--text);
+}
+
+audio{
+
+width:100%;
+}
+
+/* ENCAJE */
+
+.lace{
+
+height:40px;
+
+background:
+repeating-radial-gradient(
+circle at 20px 20px,
+#fff 0 10px,
+transparent 10px 20px
+);
+
+opacity:.8;
+}
+
+/* GALERÍA */
+
+.memory-gallery{
+
+padding:20px;
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:25px;
+}
+
+.photo{
+
+background:white;
+
+padding:10px 10px 30px;
+
+position:relative;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.15);
+
+transition:.4s;
+}
+
+.photo:hover{
+
+transform:scale(1.05);
+}
+
+.photo::before{
+
+content:"";
+
+position:absolute;
+
+width:60px;
+height:18px;
+
+background:var(--tape);
+
+top:-8px;
+left:50%;
+
+transform:
+translateX(-50%)
+rotate(-8deg);
+
+opacity:.9;
+}
+
+.photo img{
+
+width:100%;
+aspect-ratio:1;
+
+object-fit:cover;
+}
+
+/* ROTACIONES */
+
+.p1{transform:rotate(-6deg);}
+.p2{transform:rotate(5deg);}
+.p3{transform:rotate(-4deg);}
+.p4{transform:rotate(7deg);}
+.p5{transform:rotate(-8deg);}
+.p6{transform:rotate(6deg);}
+.p7{transform:rotate(-5deg);}
+.p8{transform:rotate(8deg);}
+.p9{transform:rotate(-7deg);}
+.p10{transform:rotate(5deg);}
+.p11{transform:rotate(-4deg);}
+.p12{transform:rotate(7deg);}
+.p13{transform:rotate(-6deg);}
+.p14{transform:rotate(6deg);}
+
+/* FINAL */
+
+.final-message{
+
+padding:50px 25px;
+
+text-align:center;
+}
+
+.final-message h2{
+
+font-family:'Parisienne';
+
+font-size:2.8rem;
+
+margin-bottom:20px;
+
+color:var(--text);
+}
+
+.final-message p{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+margin-bottom:15px;
+}
+
+.final-message span{
+
+font-size:1rem;
+
+letter-spacing:4px;
+
+color:var(--brown);
+}
+
+/* ANIMACIONES */
+
+.reveal{
+
+opacity:0;
+
+transform:
+translateY(50px);
+
+transition:
+all .8s ease;
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:
+translateY(0);
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+transform:translateY(-30px);
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+}
+}
