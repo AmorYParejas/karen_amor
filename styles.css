@@ -126,7 +126,7 @@ font-size:3rem;
 }
 
 .flower img{
-    width: 150px;
+    width: 300px;
 }
 
 
@@ -197,6 +197,8 @@ grid-template-columns:
 repeat(2,1fr);
 
 gap:25px;
+
+
 }
 
 .photo{
@@ -262,6 +264,8 @@ object-fit:cover;
 .p11{transform:rotate(-4deg);}
 .p12{transform:rotate(7deg);}
 .p14{transform:rotate(6deg);}
+
+
 
 /* FINAL */
 
